@@ -14,7 +14,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">General</div>
       <div class="panel-body">
-        <ul>
+        <ul class="list_a">
           <li><a href="https://mail.idevelopment.be:8443" target="_blank">HCRM</a></li>
           <li><a href="https://mail.idevelopment.be:8443" target="_blank">OpenProvider</a></li>
           <li><a href="https://mail.idevelopment.be:8443" target="_blank">Plesk panel</a></li>
@@ -29,7 +29,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">Communication</div>
     <div class="panel-body">
-      <ul>
+      <ul class="list_a">
         <li><a href="https://www.facebook.com/groups/idevelopmentbe/" target="_blank">Facebook</a></li>
         <li><a href="" target="_blank">Twitter</a></li>
       </ul>
@@ -47,7 +47,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">Provisioning</div>
       <div class="panel-body">
-        <ul>
+        <ul class="list_a">
           <li><a href="https://mail.idevelopment.be:8443" target="_blank">Plesk panel</a></li>
           <li><a href="https://serviceforce.office.idevelopment.be" target="_blank">SericeForce</a></li>
           <li><a href="{url('sar')}" target="_blank">Service Access Requests</a></li>
@@ -62,7 +62,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">Voice</div>
     <div class="panel-body">
-      <ul>
+      <ul class="list_a">
         <li><a href="#" target="_blank">FreePBX</a></li>
         <li><a href="https://www.crdc.be" target="_blank">CRDC</a></li>
         <li><a href="http://www.wittegids.be" target="_blank">Witte Gids</a></li>

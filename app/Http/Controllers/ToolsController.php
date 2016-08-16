@@ -22,4 +22,14 @@ class ToolsController extends Controller
   {
       return view('tools/index');
   }
+
+  /**
+   * Show the form to register a new tool.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function register()
+  {
+      return view('tools/create');
+  }
 }

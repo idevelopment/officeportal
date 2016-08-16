@@ -9,8 +9,7 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' type='text/css' rel='stylesheet'>
-
+<link href='http://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="{{ asset('css/bootstrap-notifications.css') }}" rel="stylesheet">
@@ -20,6 +19,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/jquery.steps.min.js') }}"></script>
+
 </head>
 <body>
     <div id="wrapper">
@@ -54,8 +55,8 @@
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a>
                        <ul class="dropdown-menu">
-                        <li><a href="#">Create new link</a></li>
-                        <li><a href="#">Manage tools</a></li>
+                        <li><a href="{{ url('/tools/register') }}">Create new link</a></li>
+                        <li><a href="{{ url('/tools/register') }}">Manage tools</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="{{ url('/tools') }}">Preview</a></li>
                       </ul>
@@ -64,12 +65,12 @@
                     <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Staff <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Departments</a></li>
-                  <li><a href="#">Manage roles</a></li>
+                  <li><a href="{{ url('/staff/create') }}">Create user</a></li>
+                  <li><a href="{{ url('/staff') }}">List all users</a></li>
                   <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
+                  <li class="dropdown-header">Other</li>
+                  <li><a href="{{ url('/staff') }}">Manage roles</a></li>
+                  <li><a href="#">Manage departments</a></li>
                 </ul>
               </li>
                     @endif

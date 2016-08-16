@@ -1,9 +1,44 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="row">
+  <div class="jumbotron">
+<h2>Welcome to the office portal</h2><hr>
+<p>This portal is to give all members from iDevelopment the correct answers and tools</p>
+</div>
+</div>
+
     <div class="row">
-        <div class="col-md-8">
-   <h3>Recent activity</h3>
+      <div class="col-md-3">
+         <h3 class="heading_a">Shortcuts</h3>
+          <ul class="list-group">
+           <li class="list-group-item">
+             <a href="/contact/index">
+               <span class="shortcut-icon ssc-icon icon-personal-details icon-larger"></span>
+               <span> Contact Management </span>
+                 </a>
+             </li>
+
+             <li class="list-group-item">
+                 <a href="/en/overview">
+                   <span class="shortcut-icon ssc-icon icon-server-information icon-larger"></span>
+                   <span>All services</span>
+                 </a>
+             </li>
+
+             <li class="list-group-item">
+                 <a href="/finance/index">
+                  <span class="fa fa-file"></span>
+                  <pan>Open Access Requests</span>
+                 </a>
+             </li>
+             </ul>
+      </div>
+
+      <div class="col-md-9">
+        <div class="row">
+        <h3 class="heading_a">Recent activity</h3>
         <ul class="notifications">
   <li class="notification">
       <div class="media">
@@ -23,25 +58,6 @@
       </div>
   </li>
 
-  <li class="notification">
-      <div class="media">
-        <div class="media-left">
-          <div class="media-object">
-            <img data-src="holder.js/50x50?bg=cccccc" class="img-circle" alt="Name">
-          </div>
-        </div>
-        <div class="media-body">
-          <strong class="notification-title"><a href="#">Nikola Tesla</a> resolved <a href="#">T-14 - Awesome stuff</a></strong>
-
-          <p class="notification-desc">Resolution: Fixed, Work log: 4h</p>
-
-          <div class="notification-meta">
-            <small class="timestamp">27. 10. 2015, 08:00</small>
-          </div>
-
-        </div>
-      </div>
-  </li>
 
   <li class="notification">
       <div class="media">
@@ -64,18 +80,5 @@
 
         </div>
 
-        <div class="col-md-4">
-           <div class="clearfix">&nbsp;</div>
-          <div id="newsArticles">
-            <h3>Recent articles</h3>
-            <div class="clearfix">&nbsp;</div>
-             <ul class="">
-              <li><a href=""><strong>iDevelopment integrated a new Ddos security policy</strong></a></li>
-              <li><a href="">iDevelopment integrated a new Ddos security policy</a></li>
-              <li><a href="">iDevelopment integrated a new Ddos security policy</a></li>
-              <li><a href="">iDevelopment integrated a new Ddos security policy</a></li>
-          </ul>
-          </div>
-        </div>
     </div>
 @endsection

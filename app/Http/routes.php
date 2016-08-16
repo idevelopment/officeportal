@@ -21,8 +21,8 @@ Route::get('/home', 'HomeController@index');
 
 
 Route::get('/staff', 'UsersController@index');
-Route::post('/staff/create', 'UsersController@register');
-Route::post('/staff/create', 'UsersController@save');
+Route::get('/staff/create', 'UsersController@register');
+Route::post('/staff/save', 'UsersController@save');
 Route::get('/profile', 'UsersController@profile');
 
 Route::get('/departments', 'DepartmentsController@index');
@@ -30,9 +30,11 @@ Route::get('/departments/create', 'DepartmentsController@register');
 Route::post('/departments/create', 'DepartmentsController@save');
 
 Route::get('/documentation', 'DocumentationController@index');
+Route::get('/documentation/list/{id}', 'DocumentationController@list');
+
 Route::get('/documentation/create', 'DocumentationController@register');
 Route::post('/documentation/create', 'DocumentationController@register');
 
 Route::get('/tools', 'ToolsController@index');
-Route::get('/tools/create', 'ToolsController@register');
-Route::post('/tools/create', 'ToolsController@register');
+Route::get('/tools/register', 'ToolsController@register');
+Route::post('/tools/save', 'ToolsController@save');

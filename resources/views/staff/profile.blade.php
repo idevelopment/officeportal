@@ -1,105 +1,45 @@
 @extends('layouts.app')
 @section('content')
-<div class="page-header">
-<h2>Profile management</h2>
-</div>
-
-<div class="col-md-9">
-   <form method="POST" action="" class="form-horizontal">
-   {!! csrf_field() !!}
-   <fieldset>
-     <div class="form-group form-sep">
-     <label for="avatar" class="control-label col-sm-2">User avatar</label>
-     <div class="col-sm-8">
-       <div class="thumbnail" style="width: 80px; height: 80px;">
-       <img src="{{asset('img/user.png')}}"/></div>
-         <span class="btn btn-default btn-file">
-         <input type="file" name="avatar" id="avatar"/>
-        </span>
-      </div>
-     </div>
-
-     <div class="form-group form-sep">
-       <label for="fname" class="control-label col-sm-2">
-         {{trans('staff.fname')}}<span class="text-danger">*</span></label>
-        <div class="col-sm-8">
-       <input id="fname" name="fname" class="form-control" value="{{ Auth::user()->fname }}" type="text">
-         </div>
-     </div>
-
-     <div class="form-group form-sep">
-      <label for="name" class="control-label col-sm-2">
-       {{trans('staff.name')}}<span class="text-danger">*</span>
-      </label>
-        <div class="col-sm-8">
-         <input type="text" id="name" name="name" value="{{ Auth::user()->name }}" class="form-control">
-        </div>
-     </div>
-
-     <div class="form-group form-sep">
-       <label for="email" class="control-label col-sm-2">{{trans('staff.email')}} <span class="text-danger">*</span></label>
-        <div class="col-sm-8">
-         <input type="text" id="email" name="email" value="{{ Auth::user()->email }}" class="form-control">
-        </div>
-    </div>
-
-    <div class="form-group form-sep">
-      <label for="phone" class="control-label col-sm-2">{{trans('staff.phone')}} <span class="text-danger">*</span></label>
-       <div class="col-sm-8">
-        <input type="text" id="phone" name="phone" value="{{ Auth::user()->phone }}" class="form-control">
-       </div>
-   </div>
-
-   <div class="form-group form-sep">
-     <label for="mobile" class="control-label col-sm-2">{{trans('staff.mobile')}} <span class="text-danger">*</span></label>
-      <div class="col-sm-8">
-       <input type="text" id="mobile" name="mobile" value="{{ Auth::user()->mobile }}" class="form-control">
-      </div>
-  </div>
-
-   <div class="form-group form-sep">
-     <label for="address" class="control-label col-sm-2">{{trans('staff.address')}} <span class="text-danger">*</span></label>
-      <div class="col-sm-8">
-       <input type="text" id="address" name="address" value="{{ Auth::user()->mobile }}" class="form-control">
-      </div>
-  </div>
-
-  <div class="form-group form-sep">
-    <label for="zipcode" class="control-label col-sm-2">{{trans('staff.zipcode')}} <span class="text-danger">*</span></label>
-     <div class="col-sm-8">
-      <input type="text" id="zipcode" name="zipcode" value="{{ Auth::user()->zipcode }}" class="form-control">
-     </div>
+<div class="clearfix">&nbsp;</div>
+<div class="row">
+ <div class="col-sm-6">
+   <img class="user_profile_img" src="{{asset('img/user.png')}}" alt="" width="76" height="76" />
+   <h1 class="user_profile_name"> {{ Auth::user()->fname }} {{ Auth::user()->name }}</h1>
+   <p class="user_profile_info">Web Developer</p>
  </div>
+</div>
 
-  <div class="form-group form-sep">
-    <label for="city" class="control-label col-sm-2">{{trans('staff.city')}} <span class="text-danger">*</span></label>
-     <div class="col-sm-8">
-      <input type="text" id="city" name="city" value="{{ Auth::user()->city }}" class="form-control">
-     </div>
+ <hr/>
+
+<div class="row">
+ <div class="col-md-12">
+
+   <!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">General data</a></li>
+  <li role="presentation"><a href="#contact" aria-controls="profile" role="tab" data-toggle="tab">Contact details</a></li>
+  <li role="presentation"><a href="#password" aria-controls="messages" role="tab" data-toggle="tab">Password management</a></li>
+  <li role="presentation"><a href="#apps" aria-controls="settings" role="tab" data-toggle="tab">Applications</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="profile">
+    @include('staff/partials/profileUser')
+  </div>
+  <div role="tabpanel" class="tab-pane" id="contact">
+   @include('staff/partials/profileContact')
  </div>
-
- <div class="form-group form-sep">
-   <label for="country" class="control-label col-sm-2">{{trans('staff.country')}} <span class="text-danger">*</span></label>
-    <div class="col-sm-8">
-     <input type="text" id="country" name="country" value="{{ Auth::user()->country }}" class="form-control">
-    </div>
+  <div role="tabpanel" class="tab-pane" id="password">
+    @include('staff/partials/profilePassword')
+  </div>
+  <div role="tabpanel" class="tab-pane" id="apps">
+    @include('staff/partials/profileApps')
+  </div>
 </div>
 
-    <div class="form-group form-sep">
-     <label for="bio" class="control-label col-sm-2">{{trans('staff.role')}}</label>
-      <div class="col-sm-8">
-        Developer
-      </div>
-     </div>
 
-    <div class="form-group">
-      <div class="col-sm-8 col-sm-offset-2">
-       <button class="btn btn-success" type="submit">{{ trans('app.update') }}</button>
-       <button type="reset" class="btn btn-danger">Cancel</button>
-     </div>
-    </div>
-   </fieldset>
- </form>
+
+ </div>
 </div>
-
 @endsection

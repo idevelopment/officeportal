@@ -1,0 +1,18 @@
+.user_profile_img {
+  border: 1px solid #999;
+  float: left;
+  margin-right: 20px;
+  border-radius: 38px;
+}
+.user_profile_name {
+  font: 400 26px / 32px "Open Sans", Arial, sans-serif;
+  margin: 0 0 6px;
+}
+.user_profile_info {
+  font-size: 12px;
+  margin: 0;
+  font: 400 13px / 16px "Open Sans", Arial, sans-serif;
+}
+.user_profile_info + .user_profile_info {
+  margin-top: 4px;
+}

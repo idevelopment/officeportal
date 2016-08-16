@@ -16,7 +16,7 @@
                               </div>
                               <div class="service-content">
                                   <h3>
-                                      <a href="#">Administration</a>
+                                      <a href="{{url('documentation/list/1')}}">Administration</a>
                                   </h3>
                                   <p>
                                       Find all the procedures regarding sales and invoices
@@ -32,7 +32,7 @@
                               </div>
                               <div class="service-content">
                                   <h3>
-                                      <a href="#">Provisioning</a>
+                                      <a href="{{url('documentation/list/1')}}">Provisioning</a>
                                   </h3>
                                   <p>
                                     Fin all the procedures regarding service provisioning.
@@ -48,7 +48,7 @@
                               </div>
                               <div class="service-content">
                                   <h3>
-                                      <a href="#">Support</a>
+                                      <a href="{{url('documentation/list/1')}}">Support</a>
                                   </h3>
                                   <p>
                                       Find answers to all your questions regarind customer support

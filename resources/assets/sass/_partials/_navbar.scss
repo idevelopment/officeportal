@@ -1,0 +1,18 @@
+.navbar-header {
+   border: 0px;
+ }
+
+.navbar-default {
+  border: 0px;
+  background-color: $navbar-background;
+  color: $navbar-link;
+  padding-bottom: 0px;
+}
+
+.navbar .navbar-brand, .navbar .nav > li > a {
+  color: $navbar-link;
+}
+
+.navbar .navbar-brand, .navbar .nav > li > a:hover {
+  color: $navbar-link-hover;
+}

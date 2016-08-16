@@ -22,4 +22,15 @@ class DocumentationController extends Controller
   {
       return view('documentation/index');
   }
+
+  /**
+   * Display documents by group.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function list($id)
+  {
+      return view('documentation/list');
+  }
+
 }

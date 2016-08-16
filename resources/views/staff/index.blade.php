@@ -1,62 +1,70 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="page-title">
+<div class="page-header ">
  <h1>User management</h1>
 </div>
     <div class="row">
         <div class="col-md-3">
-          <ul class="nav nav-pills list-group nav-stacked">
-           <li>
-            <a href="/users/register"><span class="fa fa-users fa-lg"></span>
-              <span>List users</span>
-            </a>
-           </li>
+          <div class="heading_b"><span class="heading_text">Categories</span></div>
+              <div class="list-group">
+              <a href="{{ url('/staff') }}" class="active list-group-item">All</a>
+              <a href="{{ url('/staff/create') }}" class="list-group-item">Create user</a>
+              <a href="javascript:void(0)" class="list-group-item">Manage departments</a>
+              <a href="javascript:void(0)" class="list-group-item">Manage roles</a>
+            </div>
+          </div>
 
-           <li>
-            <a href="/users/register"><span class="fa fa-user fa-lg"></span>
-              <span>Create user</span>
-            </a>
-           </li>
-
-           <li>
-            <a href="/contact/index"><span class="fa fa-user fa-lg"></span>
-              <span>Manage roles</span>
-            </a>
-           </li>
-
-           <li>
-            <a href="/contact/index"><span class="fa fa-user fa-lg"></span>
-              <span>Contact Management</span>
-            </a>
-           </li>
-    </ul>
+        <div class="col-md-8">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-sep-md">
+                <select name="contactList_filter" id="contactList_filter" class="form-control input-sm">
+                    <option value="">-- Select Department --</option>
+                	<option value="Administration">Administration</option>
+                	<option value="Technical_support">Technical support</option>
+                	<option value="Devops">Devops</option>
+                	<option value="Security">Security</option>
+                	<option value="Management">Management</option>
+                </select>
+            </div>
+            <div class="col-sm-4 col-md-3">
+                <input type="text" name="search" id="search" class="form-control input-sm" placeholder="Find user">
+            </div>
+            <div class="col-sm-4 col-md-3">
+                <button class="btn btn-primary btn-sm">Filter</button>
+            </div>
         </div>
 
-        <div class="col-md-9">
-          <div class="col-md-5">
-                            <div class="user-col">
-                                <div class="media">
-                                <a class="pull-left" href="#">
-                                    <img class="media-object img-circle" src="{{asset('img/user.png')}}" alt="100x100" data-src="holder.js/100x100" style="width: 100px; height: 100px;">
-                                </a>
-                                <div class="media-body">
-                                    <h3 class="follower-name">Ray Sin</h3>
-                                    <div><i class="fa fa-map-marker"></i> San Francisco, California, USA</div>
-                                    <div><i class="fa fa-phone"></i> +324987974</div>
-                                    <div><i class="fa fa-briefcase"></i> Software Engineer at <a href="">SomeCompany, Inc.</a></div>
+        <div class="row">
+          <hr/>
+          @foreach($users as $userItem)
+                  <ul class="contact_list">
+                      <li class="contact_item">
+                          <a href="#">
+                              <img class="img-circle" src="{{asset('img/user.png')}}" alt=""/>
+                              <span class="contact_content">
+                                  <h2>{!! $userItem->name !!}</h2>
+                                  <span class="text-muted">Manager</span>
+                                  <small class="text-muted">
+                                    {!! $userItem->email !!}
+                                  </small>
+                              </span>
+                          </a>
+                      </li>
+                      @endforeach
+                      <li class="contact_item">
+                          <a href="#">
+                              <img class="img-circle" src="{{asset('img/user.png')}}" alt=""/>
+                              <span class="contact_content">
+                                  <h2>Tim Joosten</h2>
+                                  <span class="text-muted">Devops</span>
+                                  <small class="text-muted">tim.joosten@idevelopment.be</small>
+                              </span>
+                          </a>
+                      </li>
 
-                                    <div style="height: 20px;"></div>
-
-                                    <div class="btn-toolbar">
-                                            <button class="btn btn-default"><i class="fa fa-envelope"></i> Contact</button>
-
-                                    </div><!-- btn-toolbar -->
-                                </div><!-- media-body -->
-                            </div>
-                            </div>
-                        </div><!--.col-5-->
-
-      </div>
+                    </ul>
+        </div>
+          </div><!--.col-5-->
     </div>
 @endsection
