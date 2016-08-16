@@ -1,0 +1,130 @@
+.wizard .steps ul {
+  zoom: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #eee;
+}
+.wizard .steps ul:before,
+.wizard .steps ul:after {
+  content: "";
+  display: table;
+}
+.wizard .steps ul:after {
+  clear: both;
+}
+.wizard .steps ul li {
+  float: left;
+  margin: 2px 0;
+  border-right: 1px solid #eee;
+}
+.wizard .steps ul li a {
+  display: block;
+  padding: 4px 10px;
+  text-align: center;
+  line-height: 32px;
+  color: #999;
+  position: relative;
+  font: 400 13px / 16px "Open Sans", Arial, sans-serif;
+}
+.wizard .steps ul li a:hover,
+.wizard .steps ul li a:focus {
+  text-decoration: none;
+}
+.wizard .steps ul li a .title {
+  vertical-align: 0;
+}
+.wizard .steps ul li a .title span {
+  display: inline-block;
+  font-size: 12px;
+  padding-right: 4px;
+  font-weight: 700;
+}
+.wizard .steps ul li a .current-info {
+  display: none;
+}
+.wizard .steps ul li a:before,
+.wizard .steps ul li a:after {
+  position: absolute;
+  left: 50%;
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+}
+.wizard .steps ul li a:before {
+  bottom: -20px;
+  margin-left: -10px;
+  border: 10px solid transparent;
+}
+.wizard .steps ul li a:after {
+  bottom: -14px;
+  margin-left: -7px;
+  border: 7px solid transparent;
+}
+.wizard .steps ul li.done a {
+  color: #222222;
+}
+.wizard .steps ul li.current a {
+  color: #fff;
+  background: #3bafda;
+}
+.wizard .steps ul li.current a:before {
+  border-top-color: #fff;
+}
+.wizard .steps ul li.current a:after {
+  border-top-color: #3bafda;
+}
+.wizard .steps ul li.error a {
+  color: #fff;
+  background: #da4453;
+}
+.wizard .steps ul li.error a:before {
+  border-top-color: #fff;
+}
+.wizard .steps ul li.error a:after {
+  border-top-color: #da4453;
+}
+.wizard .steps ul li:last-child {
+  border-right: none;
+}
+.wizard > .content {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: height 375ms ease-in-out;
+  transition: height 375ms ease-in-out;
+}
+.wizard > .content > .title {
+  left: -999em;
+  position: absolute;
+}
+.wizard > .content > .body {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  position: absolute;
+}
+.wizard .wizard_pagination li.disabled .btn {
+  border-color: #d3d7d7;
+  background-color: #d3d7d7;
+  opacity: 0.45;
+  filter: alpha(opacity= 45 );
+}
+.wizard .wizard_pagination li.disabled .btn-link {
+  color: #333;
+}
+.wizard .actions {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+.wizard .actions ul,
+.wizard .actions li {
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+}
+.wizard .actions li.disabled a {
+  color: #999;
+}

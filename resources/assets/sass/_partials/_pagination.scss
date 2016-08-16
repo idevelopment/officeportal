@@ -1,0 +1,29 @@
+.pagination {
+  margin: 10px 0;
+}
+.pagination > li > a,
+.pagination > li > span {
+  display: inline-block;
+  color: #3b73af;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  font-family: "Open Sans", sans-serif;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #222222;
+  background-color: #eee;
+  border-color: #ddd;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  color: #222222;
+  background-color: #eee;
+  border-color: #ddd;
+}
