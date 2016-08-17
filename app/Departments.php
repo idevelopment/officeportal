@@ -23,4 +23,14 @@ class Departments extends Model
      * @var array
      */
     protected $hidden = ['name', 'description'];
+
+    /**
+     * Department managers relation.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function managers()
+    {
+        return $this->belongsToMany('App\User');
+    }
 }
