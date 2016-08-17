@@ -19,7 +19,6 @@ Route::get('/register', 'HomeController@index')->name('register');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 Route::get('/staff', 'UsersController@index')->name('staff.index');
 Route::get('/staff/create', 'UsersController@register')->name('staff.register');
 Route::post('/staff/save', 'UsersController@save')->name('staff.store');
