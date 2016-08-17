@@ -23,6 +23,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/staff', 'UsersController@index');
 Route::get('/staff/create', 'UsersController@register');
 Route::post('/staff/save', 'UsersController@save');
+
 Route::get('/profile', 'UsersController@profile');
 
 Route::get('/departments', 'DepartmentsController@index');
