@@ -33,9 +33,8 @@ Route::update('/departments/update/{id}', 'DepartmentsController@update')->name(
 
 Route::get('/documentation', 'DocumentationController@index')->name('docs.index');
 Route::get('/documentation/list/{id}', 'DocumentationController@list')->name('docs.list');
-
 Route::get('/documentation/create', 'DocumentationController@register')->name('docs.register');
-Route::post('/documentation/create', 'DocumentationController@register')->name('docs.store');
+Route::post('/documentation/create', 'DocumentationController@store')->name('docs.store');
 
 Route::get('/tools', 'ToolsController@index')->name('tools');
 Route::get('/tools/register', 'ToolsController@register')->name('tooles.register');

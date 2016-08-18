@@ -33,4 +33,14 @@ class DocumentationController extends Controller
       return view('documentation/list');
   }
 
+  public function register()
+  {
+
+  }
+
+  public function store()
+  {
+
+  }
+
 }
