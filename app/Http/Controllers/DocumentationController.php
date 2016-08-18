@@ -8,39 +8,55 @@ use App\Http\Requests;
 
 class DocumentationController extends Controller
 {
-  public function __construct()
-  {
-      $this->middleware('auth');
-  }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
-  /**
-   * Show the departments.
-   *
-   * @return \Illuminate\Http\Response
-   */
-  public function index()
-  {
-      return view('documentation/index');
-  }
+    /**
+     * Show the departments.
+     *
+     * @url    GET|HEAD:
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return view('documentation/index');
+    }
 
-  /**
-   * Display documents by group.
-   *
-   * @return \Illuminate\Http\Response
-   */
-  public function list($id)
-  {
-      return view('documentation/list');
-  }
+    /**
+     * Display documents by group.
+     *
+     * @url    GET|HEAD:
+     * @param  int $id the documentation item id in the database.
+     * @return \Illuminate\Http\Response
+     */
+    public function listing($id)
+    {
+        return view('documentation/list');
+    }
 
-  public function register()
-  {
+    /**
+     * Create a new documentation item.
+     *
+     * @url    GET|HEAD:
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function register()
+    {
+        return view('documentation.create');
+    }
 
-  }
-
-  public function store()
-  {
-
-  }
+    /**
+     * Create a new documentation item in the database.
+     *
+     * @url    POST:
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store()
+    {
+        session()->flash('message', 'Documentation has been added.');
+        return redirect()->back();
+    }
 
 }

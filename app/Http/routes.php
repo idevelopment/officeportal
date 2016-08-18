@@ -29,10 +29,10 @@ Route::get('/departments/create', 'DepartmentsController@register')->name('depar
 Route::get('/dpartments/edit/{id}', 'DepartmentsController@edit')->name('departments.edit');
 Route::get('/departments/destroy/{id}', 'DepartmentsController@destroy')->name('departments.destroy');
 Route::post('/departments/create', 'DepartmentsController@save')->name('departments.store');
-Route::update('/departments/update/{id}', 'DepartmentsController@update')->name('departments.update');
+Route::post('/departments/update/{id}', 'DepartmentsController@update')->name('departments.update');
 
 Route::get('/documentation', 'DocumentationController@index')->name('docs.index');
-Route::get('/documentation/list/{id}', 'DocumentationController@list')->name('docs.list');
+Route::get('/documentation/list/{id}', 'DocumentationController@listing')->name('docs.list');
 Route::get('/documentation/create', 'DocumentationController@register')->name('docs.register');
 Route::post('/documentation/create', 'DocumentationController@store')->name('docs.store');
 
