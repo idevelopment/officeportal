@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactValidator;
 use App\Http\Requests\PasswordValidator;
 use App\User;
 use Illuminate\Http\Request;
@@ -38,9 +39,20 @@ class ProfileController extends Controller
 
     }
 
-    public function updateContact()
+    /**
+     * Update the contact information.
+     *
+     * @url    POST: profile/update/contact
+     * @param  ContactValidator $input
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function updateContact(ContactValidator $input)
     {
+        $user = auth()->user();
+        User::find($user->id)->update($input->except('_token'));
+        session()->flash('message', 'Contact information has been updated');
 
+        return redirect()->back();
     }
 
     /**

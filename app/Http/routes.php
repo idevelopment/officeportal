@@ -24,6 +24,7 @@ Route::post('/staff/save', 'UsersController@save')->name('staff.store');
 
 Route::get('/profile', 'ProfileController@Index')->name('profile');
 Route::post('/profile/update/password', 'ProfileController@updatePassword')->name('profile.password');
+Route::post('/profile/update/contact', 'ProfileController@updateContact')->name('profile.contact');
 
 Route::get('/departments', 'DepartmentsController@index')->name('departments');
 Route::get('/departments/create', 'DepartmentsController@register')->name('departments.register');
