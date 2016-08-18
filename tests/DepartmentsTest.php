@@ -113,7 +113,7 @@ class DepartmentsTest extends TestCase
         $user       = factory(App\User::class)->create();
         $department = factory(App\Departments::class)->create();
 
-        $route  = ['departments.update', ['id' => $department->id];
+        $route  = route('departments.update', ['id' => $department->id]);
 
         $input['name']        = 'update name';
         $input['description'] = 'Update description';
