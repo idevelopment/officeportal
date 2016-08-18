@@ -11,30 +11,31 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('/');
 
 
 Route::auth();
-Route::get('/register', 'HomeController@index');
+Route::get('/register', 'HomeController@index')->name('register');
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/staff', 'UsersController@index')->name('staff.index');
+Route::get('/staff/create', 'UsersController@register')->name('staff.register');
+Route::post('/staff/save', 'UsersController@save')->name('staff.store');
+Route::get('/profile', 'UsersController@profile')->name('profile');
 
-Route::get('/staff', 'UsersController@index');
-Route::get('/staff/create', 'UsersController@register');
-Route::post('/staff/save', 'UsersController@save');
-Route::get('/profile', 'UsersController@profile');
+Route::get('/departments', 'DepartmentsController@index')->name('departments');
+Route::get('/departments/create', 'DepartmentsController@register')->name('departments.register');
+Route::get('/dpartments/edit/{id}', 'DepartmentsController@edit')->name('departments.edit');
+Route::get('/departments/destroy/{id}', 'DepartmentsController@destroy')->name('departments.destroy');
+Route::post('/departments/create', 'DepartmentsController@save')->name('departments.store');
+Route::post('/departments/update/{id}', 'DepartmentsController@update')->name('departments.update');
 
-Route::get('/departments', 'DepartmentsController@index');
-Route::get('/departments/create', 'DepartmentsController@register');
-Route::post('/departments/create', 'DepartmentsController@save');
+Route::get('/documentation', 'DocumentationController@index')->name('docs.index');
+Route::get('/documentation/list/{id}', 'DocumentationController@listing')->name('docs.list');
+Route::get('/documentation/create', 'DocumentationController@register')->name('docs.register');
+Route::post('/documentation/create', 'DocumentationController@store')->name('docs.store');
 
-Route::get('/documentation', 'DocumentationController@index');
-Route::get('/documentation/list/{id}', 'DocumentationController@list');
-
-Route::get('/documentation/create', 'DocumentationController@register');
-Route::post('/documentation/create', 'DocumentationController@register');
-
-Route::get('/tools', 'ToolsController@index');
-Route::get('/tools/register', 'ToolsController@register');
-Route::post('/tools/save', 'ToolsController@save');
+Route::get('/tools', 'ToolsController@index')->name('tools');
+Route::get('/tools/register', 'ToolsController@register')->name('tooles.register');
+Route::post('/tools/save', 'ToolsController@save')->name('tools.store');
