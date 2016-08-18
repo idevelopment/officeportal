@@ -22,6 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('country');            
             $table->string('phone');
             $table->string('mobile');
+            $table->string('intern_phone');
+            $table->string('skype');
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();
