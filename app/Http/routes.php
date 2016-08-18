@@ -21,7 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/staff', 'UsersController@index')->name('staff.index');
 Route::get('/staff/create', 'UsersController@register')->name('staff.register');
 Route::post('/staff/save', 'UsersController@save')->name('staff.store');
-Route::get('/profile', 'UsersController@profile')->name('profile');
+
+Route::get('/profile', 'ProfileController@Index')->name('profile');
 
 Route::get('/departments', 'DepartmentsController@index')->name('departments');
 Route::get('/departments/create', 'DepartmentsController@register')->name('departments.register');

@@ -48,16 +48,6 @@ class UsersController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function profile()
-  {
-      return view('staff/profile');
-  }
-
-  /**
-   * Show the application dashboard.
-   *
-   * @return \Illuminate\Http\Response
-   */
   public function updateProfile()
   {
       return view('staff/profile');
