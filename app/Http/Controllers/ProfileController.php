@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactValidator;
 use App\Http\Requests\PasswordValidator;
+use App\Http\Requests\ProfileInfoValidator;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -34,9 +35,22 @@ class ProfileController extends Controller
         return view('staff/profile');
     }
 
-    public function updateGeneral()
-    {
 
+    /**
+     * Update the basic information information.
+     *
+     * @url    POST: /profile/update/information
+     * @param  ProfileInfoValidator $input
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function updateGeneral(ProfileInfoValidator $input)
+    {
+        // TODO: Write test.
+        $user = auth()->user();
+        User::find($user->id)->update($input->except('_token'));
+        session()->flash('message', 'basic profile information has been updated.');
+
+        return redirect()->back();
     }
 
     /**
