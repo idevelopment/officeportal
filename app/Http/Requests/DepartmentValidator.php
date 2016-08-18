@@ -4,6 +4,10 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
+/**
+ * Class DepartmentValidator
+ * @package App\Http\Requests
+ */
 class DepartmentValidator extends Request
 {
     /**
@@ -13,7 +17,7 @@ class DepartmentValidator extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +28,8 @@ class DepartmentValidator extends Request
     public function rules()
     {
         return [
-            //
+            'name'        => 'required',
+            'description' => 'required'
         ];
     }
 }

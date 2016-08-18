@@ -15,7 +15,6 @@ use App\Http\Requests;
 class DepartmentsController extends Controller
 {
     // TODO: Write tests for this department.
-    // TODO: Fill in the validator.
     // TODO: Create department member relationship.
     // TODO: Register routes.
 
@@ -36,7 +35,7 @@ class DepartmentsController extends Controller
      */
     public function index()
     {
-        return view('departments/index');
+        return view('departments.index');
     }
 
     /**
@@ -47,7 +46,7 @@ class DepartmentsController extends Controller
      */
     public function register()
     {
-        return view();
+        return view('departments.register');
     }
 
     /**
@@ -57,33 +56,37 @@ class DepartmentsController extends Controller
      * @param  DepartmentValidator $input
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(DepartmentValidator $input)
+    public function save(DepartmentValidator $input)
     {
+        Departments::create($input->except('_token'));
+        session()->flash('message', 'New department has been created');
         return redirect()->back();
     }
 
     /**
      * Update view for a specific department.
      *
-     * @url    GET|HEAD:
+     * @url    GET|HEAD: /departments/update/{id}
      * @param  int $id the id off the department in the database.
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit($id)
     {
-        $data['department'] = Departments::with('managers')->find($id)
+        $data['department'] = Departments::with('managers')->find($id);
         return view('', $data);
     }
 
     /**
      * Update a department in the database.
      *
-     * @url    POST:
+     * @url    POST: /departments/update/{id}
+     * @param  DepartmentValidator $input
      * @param  int $id the id off the department in the database.
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update($id)
+    public function update(DepartmentValidator $input, $id)
     {
+        Departments::find($id)->update($input->except('_token'));
         session()->flash('The department has been updated');
         return redirect()->back();
     }
@@ -91,7 +94,7 @@ class DepartmentsController extends Controller
     /**
      * Remove a department out off the system.
      *
-     * @url    GET|HEAD: /departments/delete
+     * @url    GET|HEAD: /departments/destroy/{id}
      * @param  int $id, the Department id in the database.
      * @return \Illuminate\Http\RedirectResponse
      */

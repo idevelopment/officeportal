@@ -24,9 +24,12 @@ Route::get('/staff/create', 'UsersController@register')->name('staff.register');
 Route::post('/staff/save', 'UsersController@save')->name('staff.store');
 Route::get('/profile', 'UsersController@profile')->name('profile');
 
-Route::get('/departments', 'DepartmentsController@index')->name('departments.register');
+Route::get('/departments', 'DepartmentsController@index')->name('departments');
 Route::get('/departments/create', 'DepartmentsController@register')->name('departments.register');
+Route::get('/dpartments/edit/{id}', 'DepartmentsController@edit')->name('departments.edit');
+Route::get('/departments/destroy/{id}', 'DepartmentsController@destroy')->name('departments.destroy');
 Route::post('/departments/create', 'DepartmentsController@save')->name('departments.store');
+Route::update('/departments/update/{id}', 'DepartmentsController@update')->name('departments.update');
 
 Route::get('/documentation', 'DocumentationController@index')->name('docs.index');
 Route::get('/documentation/list/{id}', 'DocumentationController@list')->name('docs.list');
