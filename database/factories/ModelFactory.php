@@ -26,3 +26,11 @@ $factory->define(App\Departments::class, function (Faker\Generator $faker) {
         'description' => $faker->text(200)
     ];
 });
+
+$factory->define(App\Documentation::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'category' => $faker->name,
+        'description' => $faker->words(5)
+    ];
+});
