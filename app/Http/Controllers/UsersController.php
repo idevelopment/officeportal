@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 use App\Http\Requests;
 
@@ -14,37 +15,37 @@ class UsersController extends Controller
   }
 
   /**
-   * Show the application dashboard.
+   * Show all users.
    *
    * @return \Illuminate\Http\Response
    */
   public function index()
   {
-      return view('staff/index');
+    $data["users"] = User::all();
+      return view('staff/index', $data);
   }
 
   /**
-   * Show the application dashboard.
+   * Register a new user.
    *
    * @return \Illuminate\Http\Response
    */
   public function register()
   {
-      return view('staff/index');
+      return view('staff/create');
   }
 
   /**
-   * Show the application dashboard.
+   * Save the new user.
    *
-   * @return \Illuminate\Http\Response
    */
   public function save()
   {
-      return view('staff/index');
+      return true;
   }
 
   /**
-   * Show the application dashboard.
+   * Show the form to update the profile.
    *
    * @return \Illuminate\Http\Response
    */
@@ -54,9 +55,8 @@ class UsersController extends Controller
   }
 
   /**
-   * Show the application dashboard.
+   * Update the profile.
    *
-   * @return \Illuminate\Http\Response
    */
   public function updateProfile()
   {
