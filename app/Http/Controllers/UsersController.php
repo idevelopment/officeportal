@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Roles;
 
 use App\Http\Requests;
 
@@ -32,7 +33,9 @@ class UsersController extends Controller
    */
   public function register()
   {
-      return view('staff/create');
+    $data["roles"] = Roles::all();
+
+      return view('staff/create', $data);
   }
 
   /**
