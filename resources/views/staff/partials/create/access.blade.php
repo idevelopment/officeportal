@@ -4,6 +4,9 @@
      <div class="col-sm-8">
        <select name="department" id="department" class="form-control">
          <option value="">-- Please select --</option>
+         @foreach($departments as $department)
+          <option value="{!! $department->name !!}">{!! $department->name !!}</option>
+         @endforeach
        </select>
       </div>
   </div>
