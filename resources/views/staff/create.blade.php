@@ -4,13 +4,8 @@
 <h2>Create user</h2>
 </div>
 <div class="col-md-3">
-  <div class="heading_b"><span class="heading_text">Categories</span></div>
-      <div class="list-group">
-      <a href="{{ url('/staff') }}" class="active list-group-item">All</a>
-      <a href="{{ url('/staff/create') }}" class="list-group-item">Create user</a>
-      <a href="javascript:void(0)" class="list-group-item">Manage departments</a>
-      <a href="javascript:void(0)" class="list-group-item">Manage roles</a>
-    </div>
+  @include('staff/partials/sidebar')
+
   </div>
 
 <div class="col-md-9">
@@ -25,46 +20,14 @@
 
   <h3>Contact details</h3>
    <section>
-     <div class="form-group">
-         <label for="email" class="control-label col-sm-2">
-           {{trans('staff.email')}} <span class="text-danger">*</span></label>
-          <div class="col-sm-8">
-         <input id="email" name="email" class="form-control" value="" type="text">
-           </div>
-       </div>
-
-    <div class="form-group">
-        <label for="mobile" class="control-label col-sm-2">
-          {{trans('staff.mobile')}} <span class="text-danger">*</span></label>
-         <div class="col-sm-8">
-        <input id="mobile" name="mobile" class="form-control" value="" type="text">
-          </div>
-      </div>
-
-      <div class="form-group">
-       <label for="name" class="control-label col-sm-2">
-        {{trans('staff.phone')}}
-       </label>
-         <div class="col-sm-8">
-          <input type="text" id="name" name="name" value="{{ Auth::user()->name }}" class="form-control">
-         </div>
-      </div>
-
-    <div class="form-group">
-      <label for="skype" class="control-label col-sm-2">{{trans('staff.skype')}} </label>
-       <div class="col-sm-8">
-        <input type="text" id="skype" name="skype" value="" class="form-control">
-       </div>
-    </div>
-
+     @include('staff/partials/create/contact')
    </section>
 
  <h3>Access details</h3>
   <section>
-   <p><strong>Comments</strong></p>
-   <p>JavaScript has support for single- and multi-line comments. Comments are ignored by the JavaScript engine and therefore have no side-effects on the outcome of the program. Use comments to document the code for other developers. Libraries like JSDoc are available to help generate project documentation pages based on commenting conventions.</p>
+    @include('staff/partials/create/access')
 
-     </section>
+  </section>
 </div>
 </form>
 
@@ -72,13 +35,13 @@
 <script>
      $(function() {
          // wizard
-         yukon_steps.init();
+         wizard.init();
      })
  </script>
 
 <script>
 // wizard
-	yukon_steps = {
+	wizard = {
 		init: function() {
 			if ($("#wizard_101").length) {
 				// initialize wizard
@@ -97,14 +60,14 @@
 					},
 					onStepChanged: function (event, currentIndex, priorIndex) {
 						// adjust wizard height
-						yukon_steps.setContentHeight('#wizard_101')
+						wizard.setContentHeight('#wizard_101')
 					}
 				});
 				// set initial wizard height
-				yukon_steps.setContentHeight('#wizard_101');
+				wizard.setContentHeight('#wizard_101');
                 // rezie wizard on window resize
                 $(window).on('resize',function() {
-                    yukon_steps.setContentHeight('#wizard_101');
+                    wizard.setContentHeight('#wizard_101');
                 })
 			}
 
@@ -126,19 +89,19 @@
 
 					onStepChanged: function (event, currentIndex, priorIndex) {
 						// adjust wizard height
-						yukon_steps.setContentHeight('#wizard_form');
+						wizard.setContentHeight('#wizard_form');
 					},
 					onFinished: function(event, currentIndex) {
-						alert("Submitted!");
-
           wizard_form.submit();
+          alert("Submitted!");
+
 					}
 				});
 				// set initial wizard height
-				yukon_steps.setContentHeight('#wizard_form');
+				wizard.setContentHeight('#wizard_form');
                 // rezie wizard on window resize
                 $(window).on('resize',function() {
-                    yukon_steps.setContentHeight('#wizard_form');
+                    wizard.setContentHeight('#wizard_form');
                 })
             }
         },
