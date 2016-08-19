@@ -25,6 +25,10 @@ class UserSeeder extends Seeder
 
         $data['email']    = 'admin@idevelopment.be';
         $data['password'] = bcrypt('admin');
-        User::create($data);
+
+        $user = User::create($data);
+
+        // Assign Administrator role.
+        Bouncer::assign('Administrator')->to($user);
     }
 }
