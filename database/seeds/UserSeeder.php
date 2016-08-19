@@ -2,7 +2,11 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use Illuminate\Support\Facades\DB;
 
+/**
+ * Class UserSeeder
+ */
 class UserSeeder extends Seeder
 {
     /**
@@ -12,6 +16,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('users')->delete();
 
         $data['name']     = 'Administrator';
         $data['fname']     = 'iDevelopment';
@@ -25,6 +30,10 @@ class UserSeeder extends Seeder
 
         $data['email']    = 'admin@idevelopment.be';
         $data['password'] = bcrypt('admin');
-        User::create($data);
+
+        $user = User::create($data);
+
+        // Assign Administrator role.
+        Bouncer::assign('Administrator')->to($user);
     }
 }

@@ -1,5 +1,7 @@
 # iDevelopment Portal
 
+[![Build Status](https://travis-ci.org/idevelopment/officeportal.svg?branch=master)](https://travis-ci.org/idevelopment/officeportal)
+
 Office portal is a small tool for the staff members of idevelopment.
 
 ## Contributing

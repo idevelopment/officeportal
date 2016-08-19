@@ -156,6 +156,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /**
+         * Package Service providers
+         */
+        Silber\Bouncer\BouncerServiceProvider::class,
+        Webpatser\Countries\CountriesServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+
     ],
 
     /*
@@ -202,6 +209,12 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        /**
+         * Package providers
+         */
+        'Bouncer' => Silber\Bouncer\BouncerFacade::class,
+        'Countries' => Webpatser\Countries\CountriesFacade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

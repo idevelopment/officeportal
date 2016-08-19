@@ -13,7 +13,6 @@
 
 Route::get('/', 'HomeController@index')->name('/');
 
-
 Route::auth();
 Route::get('/register', 'HomeController@index')->name('register');
 

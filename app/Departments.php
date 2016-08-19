@@ -33,4 +33,14 @@ class Departments extends Model
     {
         return $this->belongsToMany('App\User');
     }
+
+    /**
+     * Departments members relation.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function members()
+    {
+        return $this->belongsToMany('App\User', 'departments_members', 'id', 'user_id');
+    }
 }
