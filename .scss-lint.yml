@@ -3,3 +3,6 @@ exclude: 'node_modules/bootstrap-sass/assets/stylesheets/_bootstrap-mincer.scss'
 linters:
   PseudoElement:
     enabled: false
+
+  SelectorFormat:
+    enabled: false
