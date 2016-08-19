@@ -160,7 +160,7 @@ return [
          * Package Service providers
          */
         Silber\Bouncer\BouncerServiceProvider::class,
-
+        Webpatser\Countries\CountriesServiceProvider::class
 
     ],
 
@@ -212,6 +212,7 @@ return [
          * Package providers
          */
         'Bouncer' => Silber\Bouncer\BouncerFacade::class,
+        'Countries' => 'Webpatser\Countries\CountriesFacade',
     ],
 
 ];
