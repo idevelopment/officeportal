@@ -14,6 +14,9 @@
        <div class="col-sm-8">
          <select name="role" id="role" class="form-control">
            <option value="">-- Please select --</option>
+           @foreach($roles as $role)
+            <option value="{!! $role->name !!}">{!! $role->name !!}</option>
+           @endforeach
          </select>
         </div>
     </div>
