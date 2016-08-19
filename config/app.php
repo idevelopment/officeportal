@@ -156,6 +156,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /**
+         * Package Service providers
+         */
+        Silber\Bouncer\BouncerServiceProvider::class,
+
+
     ],
 
     /*
@@ -202,6 +208,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        /**
+         * Package providers
+         */
+        'Bouncer' => Silber\Bouncer\BouncerFacade::class,
     ],
 
 ];
