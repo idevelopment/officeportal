@@ -4,14 +4,14 @@
   <div class="form-group form-sep">
     <label for="email" class="control-label col-sm-2">{{trans('staff.password')}} <span class="text-danger">*</span></label>
      <div class="col-sm-8">
-      <input type="text" id="email" name="email" value="{{ Auth::user()->email }}" class="form-control">
+       <input type="password" id="password" name="password" class="form-control">
      </div>
  </div>
 
  <div class="form-group form-sep">
-   <label for="phone" class="control-label col-sm-2">{{trans('staff.confirmPassword')}} <span class="text-danger">*</span></label>
+   <label for="confirmPassword" class="control-label col-sm-2">{{trans('staff.confirmPassword')}} <span class="text-danger">*</span></label>
     <div class="col-sm-8">
-     <input type="text" id="phone" name="phone" value="{{ Auth::user()->phone }}" class="form-control">
+     <input type="password" id="confirmPassword" name="confirmPassword" class="form-control">
     </div>
 </div>
 
