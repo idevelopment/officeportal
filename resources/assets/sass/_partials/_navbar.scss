@@ -16,3 +16,19 @@
 .navbar .navbar-brand, .navbar .nav > li > a:hover {
   color: $navbar-link-hover;
 }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  background-color: #016B8F;
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > .open{
+  color: #fff;
+  background: #016B8F;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #fff;
+  background: #016B8F;
+}
