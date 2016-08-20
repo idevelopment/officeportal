@@ -16,46 +16,25 @@
    <div class="col-md-12">
      <table class="table table-bordered table-striped">
        <thead>
-         <th>Department</th>
+         <th class="col-md-3">Department</th>
          <th>Public inbox</th>
          <th>Public phone</th>
          <th class="text-danger">Red Phone</th>
          <th>Opening hours</th>
        </thead>
        <tbody>
+         @foreach($departments as $department)
          <tr>
-           <td>Administration</td>
-           <td><a href="mailto:support@idevelopment.be">support@idevelopment.be</a></td>
-           <td>+32</td>
-           <td>3000</td>
+           <td>{!! $department->name !!}</td>
+           <td><a href="mailto:{!! $department->mailbox !!}">{!! $department->mailbox !!}</a></td>
+           <td>{!! $department->phone !!}</td>
+           <td>{!! $department->redphone !!}</td>
            <td>
              <span class="fa fa-phone"></span> 9:00 - 17:30<br>
              <span class="fa fa-envelope"></span> 9:00 - 17:30<br>
            </td>
          </tr>
-
-         <tr>
-           <td>Sales</td>
-           <td><a href="mailto:sales@idevelopment.be">sales@idevelopment.be</a></td>
-           <td>+32</td>
-           <td>2000</td>
-           <td>
-             <span class="fa fa-phone"></span> 9:00 - 17:30<br>
-             <span class="fa fa-envelope"></span> 9:00 - 17:30<br>
-           </td>
-         </tr>
-
-         <tr>
-           <td>Support</td>
-           <td><a href="mailto:support@idevelopment.be">support@idevelopment.be</a></td>
-           <td>+32</td>
-           <td>3000</td>
-           <td>
-             <span class="fa fa-phone"></span> 9:00 - 17:30<br>
-             <span class="fa fa-envelope"></span> 00:00 - 24:00<br>
-           </td>
-         </tr>
-
+         @endforeach
        </tbody>
      </table>
    </div>
