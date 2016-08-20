@@ -9,3 +9,12 @@ linters:
 
   SelectorDepth:
     enabled: false
+
+  QualifyingElement:
+    enabled: false
+
+  VendorPrefix:
+    enabled: false
+
+  NestingDepth:
+    enabled: false
