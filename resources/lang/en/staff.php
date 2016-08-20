@@ -6,7 +6,7 @@ return [
   'email' => 'Email',
   'phone' => 'Phone number',
   'internPhone' => 'VOIP',
-  'skype' => 'Sype',
+  'skype' => 'Skype',
 
 
   'mobile' => 'Mobile',
