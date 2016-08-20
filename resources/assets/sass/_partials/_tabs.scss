@@ -1,58 +1,76 @@
 .nav-tabs {
-  border-bottom-color: #ddd;
+  border-bottom-color: $tab-gray;
+
+  // .nav-tabs.nav-justified > li.disabled > a
+  &.nav-justified > li.disabled > a {
+    border-bottom: 1px solid $tab-gray;
+  }
+
+  // .nav-tabs.nav-justified > li.active > a
+  &.nav-justified > li.active > a {
+    padding-bottom: 7px;
+  }
+
+
+  // .nav-tabs > li
+  > li {
+    background: none;
+    margin: 0 2px -1px 0;
+
+    // .nav-tabs > li.active > a
+    &.active > a {
+      border-top-color: transparent;
+      padding-bottom: 10px;
+      position: relative;
+
+      // .nav-tabs > li.active > a:before
+      &:before {
+        background: $tab-blue;
+        content: '';
+        display: block;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        top: -2px;
+        width: 100%;
+      }
+    }
+
+    // .nav-tabs > li > a
+    > a {
+      background: $tab-white-2;
+      border: 1px solid transparent;
+      margin: 0;
+      padding: 8px 10px 7px;
+    }
+  }
 }
-.nav-tabs > li {
-  margin: 0 2px -1px 0;
-  background: none;
-}
-.nav-tabs > li > a {
-  background: #f5f5f5;
-  padding: 8px 10px 7px;
-  margin: 0;
-  border: 1px solid transparent;
-}
+
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus {
+  background: $tab-gray-2;
   border: 1px solid transparent;
-  background: #e8e8e8;
 }
-.nav-tabs > li.active > a {
-  border-top-color: transparent;
-  position: relative;
-  padding-bottom: 10px;
-}
+
+// scss-lint:disable PropertySortOrder
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  background: #fff;
-  border-color: #ddd;
-  border-bottom-color: #fff;
+  background: $tab-white;
+  border-color: $tab-gray;
+  border-bottom-color: $tab-white;
 }
-.nav-tabs > li.active > a:before {
-  content: '';
-  display: block;
-  width: 100%;
-  left: 0;
-  top: -2px;
-  height: 2px;
-  background: #3bafda;
-  position: absolute;
-}
+
 .nav-tabs > li.disabled > a,
 .nav-tabs > li.disabled > a:hover,
 .nav-tabs > li.disabled > a:focus {
-  background: #fff;
-  color: #999;
+  background: $tab-white;
+  color: $tab-gray-3;
 }
-.nav-tabs.nav-justified > li.active > a {
-  padding-bottom: 7px;
-}
-.nav-tabs.nav-justified > li.disabled > a {
-  border-bottom: 1px solid #ddd;
-}
+
 .tab-content {
-  border-width: 0 1px 1px;
+  border-color: $tab-gray;
   border-style: solid;
-  border-color: #ddd;
+  border-width: 0 1px 1px;
   padding: 14px 10px;
 }
