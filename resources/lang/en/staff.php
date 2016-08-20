@@ -5,11 +5,19 @@ return [
   'name' => 'Last Name',
   'email' => 'Email',
   'phone' => 'Phone number',
+  'internPhone' => 'VOIP',
+  'skype' => 'Sype',
+
 
   'mobile' => 'Mobile',
   'address' => 'Address',
   'zipcode' => 'Zipcode',
   'city' => 'City',
+
   'country' => 'Country',
+  'department' => 'Department',
   'role' => 'Role',
+
+  'password' => 'Password',
+  'confirmPassword' => 'Confirm password',
 ];
