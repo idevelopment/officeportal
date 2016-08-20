@@ -14,14 +14,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="{{ asset('css/bootstrap-notifications.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery.businessHours.css') }}" rel="stylesheet">
+
 
     <link rel="stylesheet" href="https://raw.githubusercontent.com/skywalkapps/bootstrap-notifications/master/dist/stylesheets/bootstrap-notifications.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="{{ asset('js/jquery.steps.min.js') }}"></script>
-    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script src="{{ asset('js/jquery.businessHours.js') }}"></script>
 
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<style>
+.workingBusinssDay {
+    border: 2px solid #462d6c;
+    background-color: #563d7c;
+}
+
+.dayOff {
+    border: 2px solid #cd3804;
+    background-color: #dd4814;
+}
+</style>
 </head>
 <body>
     <div id="wrapper">

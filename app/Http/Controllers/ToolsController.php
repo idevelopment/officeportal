@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Departments;
+use App\Roles;
+
 use App\Http\Requests;
 
 class ToolsController extends Controller
@@ -30,6 +33,9 @@ class ToolsController extends Controller
    */
   public function register()
   {
-      return view('tools/create');
+     $data["departments"] = Departments::all();
+     $data["roles"] = Roles::all();
+
+    return view('tools/create', $data);
   }
 }

@@ -35,7 +35,9 @@ class DepartmentsController extends Controller
      */
     public function index()
     {
-        return view('departments.index');
+      $data["departments"] = Departments::all();
+
+        return view('departments.index', $data);
     }
 
     /**
