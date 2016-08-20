@@ -8,15 +8,33 @@ $link:               #3b73af;
 $link-hover:         #3b73af;
 
 // Buttons
+$btn-success:          #8cc152;
+$btn-success-dropdown: #a0cc70;
+$btn-success-state:    #6d9d38;
+$btn-dark-gray:        #adadad;
+$btn-gray-2:           #e0e0e0;
+$btn-gray-3:           #ccc;
+$btn-gray-rgb:         rgba(0, 0, 0, .125);
+$btn-white:            #fff;
 $btn-default:          #ffffff;
 $btn-default-bg:       #333333;
 $btn-primary:          #ffffff;
+$btn-primary-state:    #228eb6;
+$btn-primary-dropdown: #5dbde0;
 $btn-primary-bg:       #3bafda;
+$btn-info:             #37bc9b;
+$btn-info-state:       #298d74;
+$btn-info-state-2:     #50ccad;
 $btn-danger:           #ffffff;
-$btn-dange-bg:         #da4453;
+$btn-danger-open:      #e16672;
+$btn-danger-2:         #bc2534;
+$btn-danger-3:         #da4453;
+$btn-dange-bg:         #da4453; // TYPO
 $btn-success:          #333333;
 $btn-warning:          #ffffff;
 $btn-warning-bg:       #f8c969;
+$btn-warning-2:        #efa50b;
+$btn-orange:           #f6bb42;
 
 // Contact list
 $contact-hover-border: #3bafda;
