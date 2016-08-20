@@ -6,3 +6,6 @@ linters:
 
   SelectorFormat:
     enabled: false
+
+  SelectorDepth:
+    enabled: false
