@@ -1,48 +1,61 @@
 .panel-primary > .panel-heading {
-  color: #fff;
-  background-color: #01a8fe;
-  border-color: #01a8fe; }
+  background-color: $panel-primary;
+  border-color: $panel-primary;
+  color: $panel-white;
+}
 
 .panel-info > .panel-heading {
-  color: #fff;
-  background-color: #56C0E0;
-  border-color: #56C0E0; }
+  background-color: $panel-info;
+  border-color: $panel-info;
+  color: $panal-white;
+}
 
 .panel-success > .panel-heading {
-  color: #fff;
-  background-color: #1bbf89;
-  border-color: #1bbf89; }
+  background-color: $panel-green;
+  border-color: $panel-green;
+  color: $panel-white;
+}
 
 .panel-warning > .panel-heading {
-  color: #fff;
-  background-color: #f7af3e;
-  border-color: #f7af3e; }
+  background-color: $panel-warning;
+  border-color: $panel-warning;
+  color: $panel-white;
+}
 
 .panel-danger > .panel-heading {
-  color: #fff;
-  background-color: #DB524B;
-  border-color: #DB524B; }
+  background-color: $panel-danger;
+  border-color: $panel-danger;
+  color: $panel-white;
+}
 
 .panel-default > .panel-heading {
+  background: $panel-gray;
+  border-color: $panel-gray;
+  color: $panel-black;
   position: relative;
-  background: #dae6ec;
-  color: #333;
-  border-color: #dae6ec; }
 
-.panel-default > .panel-heading a {
-  color: #333; }
+  // .panel-default > .panel-heading a
+  a {
+    color: $panel-black;
+  }
+}
 
+// scss-lint:disable MergeableSelector
 .panel-success {
-  border-color: #1bbf89; }
+  border-color: $panel-green;
+}
 
+// scss-lint:disable MergeableSelector
 .panel-primary {
-  border-color: #01a8fe; }
+  border-color: $panel-primary;
+}
 
+// scss-lint:disable MergeableSelector
 .panel-info {
-  border-color: #56C0E0; }
+  border-color: $panel-info;
+}
 
+// scss-lint:disable MergeableSelector
 .panel-warning {
-  border-color: #f7af3e; }
-
-.panel-danger {
-  border-color: #DB524B; }
+  border-color: $panel-warning;
+}
