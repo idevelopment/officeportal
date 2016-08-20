@@ -2,76 +2,93 @@
 .list_b,
 .list_c,
 .list_d {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
+
 .list_a li,
 .list_b li,
 .list_c li,
 .list_d li {
-  position: relative;
   padding-left: 16px;
+  position: relative;
 }
+
 .list_a li:before,
 .list_b li:before,
 .list_c li:before,
 .list_d li:before {
-  position: absolute;
-  content: '';
-  top: 8px;
-  left: 2px;
-  width: 5px;
-  height: 5px;
-  display: block;
   border-radius: 50%;
-}
-.list_a li:before {
-  background: #3bafda;
-}
-.list_b li:before {
-  background: #f6bb42;
-}
-.list_c li:before {
-  background: #da4453;
-}
-.list_d li:before {
-  background: #8cc152;
+  content: '';
+  display: block;
+  height: 5px;
+  left: 2px;
+  position: absolute;
+  top: 8px;
+  width: 5px;
 }
 
-/* list group */
+.list_a li:before {
+  background: $list-blue;
+}
+
+.list_b li:before {
+  background: $list-orange;
+}
+
+.list_c li:before {
+  background: $list-red;
+}
+
+.list_d li:before {
+  background: $list-green;
+}
+
+// list group
 .list-group-item {
-  border: none;
+  border: 0;
+
+  // .list-group-item + .list-group-item
+  + .list-group-item {
+    border-top: 1px solid $list-light-gray;
+  }
 }
-.list-group-item + .list-group-item {
-  border-top: 1px solid #eee;
-}
+
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus {
-  background: #eee;
-  color: #222222;
+  background: $list-light-gray;
+  border-color: $list-light-gray;
+  color: $list-black-2;
   z-index: auto;
-  border-color: #eee;
 }
+
 a.list-group-item:hover,
 a.list-group-item:focus {
-  background: #eee;
+  background: $list-light-gray;
 }
+
 .list_group_sep .list-group-item {
-  border: 1px solid #e8e8e8;
+  border: 1px solid $list-gray;
   border-radius: 4px;
+
+  // .list_group_sep .list-group-item a
+  a {
+    color: $list-black;
+  }
+
+  // .list_group_sep .list-group-item + .list-group-item
+  + .list-group-item {
+    margin-top: 4px;
+  }
 }
-.list_group_sep .list-group-item + .list-group-item {
-  margin-top: 4px;
-}
-.list_group_sep .list-group-item a {
-  color: #555;
-}
+
 .list_group_sep .progress {
   margin: 4px 0 0;
 }
+
 .list_group_sep .list_icon {
-  color: #f1c40f;
+  color: $list-warning;
   font-size: 18px;
 }
