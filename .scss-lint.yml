@@ -6,3 +6,18 @@ linters:
 
   SelectorFormat:
     enabled: false
+
+  SelectorDepth:
+    enabled: false
+
+  QualifyingElement:
+    enabled: false
+
+  VendorPrefix:
+    enabled: false
+
+  NestingDepth:
+    enabled: false
+
+  IdSelector:
+    enabled: false

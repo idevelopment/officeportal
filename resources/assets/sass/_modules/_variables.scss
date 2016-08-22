@@ -1,6 +1,6 @@
 // Basic settings
-$body-bg:            #F0F0F0;
-$body-text:          #333333;
+$body-bg:            #f0f0f0;
+$body-text:          #333;
 $border:             #ddd;
 
 // links
@@ -8,20 +8,33 @@ $link:               #3b73af;
 $link-hover:         #3b73af;
 
 // Buttons
-$btn-default:          #ffffff;
-$btn-default-bg:       #333333;
-
-$btn-primary:          #ffffff;
+$btn-success:          #8cc152;
+$btn-success-dropdown: #a0cc70;
+$btn-success-state:    #6d9d38;
+$btn-dark-gray:        #adadad;
+$btn-gray-2:           #e0e0e0;
+$btn-gray-3:           #ccc;
+$btn-gray-rgb:         rgba(0, 0, 0, .125);
+$btn-white:            #fff;
+$btn-default:          #fff;
+$btn-default-bg:       #333;
+$btn-primary:          #fff;
+$btn-primary-state:    #228eb6;
+$btn-primary-dropdown: #5dbde0;
 $btn-primary-bg:       #3bafda;
-
-$btn-danger:           #ffffff;
-$btn-dange-bg:         #da4453;
-
-
-$btn-success:          #333333;
-
-$btn-warning:          #ffffff;
+$btn-info:             #37bc9b;
+$btn-info-state:       #298d74;
+$btn-info-state-2:     #50ccad;
+$btn-danger:           #fff;
+$btn-danger-open:      #e16672;
+$btn-danger-2:         #bc2534;
+$btn-danger-3:         #da4453;
+$btn-dange-bg:         #da4453; // TYPO
+$btn-success:          #333;
+$btn-warning:          #fff;
 $btn-warning-bg:       #f8c969;
+$btn-warning-2:        #efa50b;
+$btn-orange:           #f6bb42;
 
 // Contact list
 $contact-hover-border: #3bafda;
@@ -37,5 +50,108 @@ $bg-green:             #2d9340;
 
 // Navbar settings
 $navbar-background:  #02779e;
+$navbar-background-default: #016b8f;
 $navbar-link:        #fff;
 $navbar-link-hover:  #f1f1f1;
+
+// Documentation
+$docs-gray:     #d7d7d7;
+$docs-icon:     #636363;
+$docs-black:    #181818;
+$docs-white:    #f0f4f5;
+
+// Wizard
+$wizard-black-2:    #222;
+$wizard-black:      #333;
+$wizard-gray:       #d3d7d7;
+$wizard-dark-gray:  #999;
+$wizard-light-gray: #eee;
+$wizard-error:      #da4453;
+$wizard-white:      #fff;
+$wizard-blue:       #3bafda;
+
+// Search
+$search-gray:       #eee;
+
+// Tabs
+$tab-gray:          #ddd;
+$tab-gray-2:        #e8e8e8;
+$tab-gray-3:        #999;
+$tab-white:         #fff;
+$tab-white-2:       #f5f5f5;
+$tab-blue:          #3bafda;
+
+// Profile
+$profile-gray:      #999;
+
+// Panels
+$panel-white:       #fff;
+$panel-gray:        #dae6ec;
+$panel-black:       #333;
+$panel-green:       #1bbf89;
+$panel-danger:      #db524b;
+$panel-warning:     #f7af3e;
+$panel-info:        #56c0e0;
+$panel-primary:     #01a8fe;
+
+// Pagination
+$pagination-blue:       #3b73af;
+$pagination-white:      #fff;
+$pagination-light-gray: #eee;
+$pagination-gray:       #ddd;
+$pagination-black:      #222;
+
+// lists
+$list-light-gray:       #eee;
+$list-black:            #555;
+$list-black-2:          #222;
+$list-warning:          #f1c40f;
+$list-orange:           #f6bb42;
+$list-gray:             #e8e8e8;
+$list-blue:             #3bafda;
+$list-green:            #8cc152;
+$list-red:              #da4453;
+
+// Labels & badges
+$label-danger:          #da4453;
+$label-warning:         #f6bb42;
+$label-success:         #8cc152;
+$label-info:            #37bc9b;
+$label-primary:         #3bafda;
+$label-white:           #fff;
+
+// General
+$general-rgb:         rgba(0, 0, 0, .2);
+$general-rgb-2:       rgba(0, 0, 0, .05);
+$general-black:       #333;
+$general-white:       #fff;
+$general-black-2:     #555;
+$general-gray:        #999;
+$general-blue:        #3b73af;
+$general-gray-hex:    #f0f0f0;
+$general-light-gray:  #eee;
+
+// Forms
+$form-white:          #fff;
+$form-gray:           #ddd;
+$form-gray-2:         #bdc3c7;
+$form-group:          #d3d7d7;
+$form-dark-gray:      #888;
+$form-error:          #da4453;
+$form-error-focus:    #af2331;
+$form-required:       #c0392b;
+$form-success:        #8cc152;
+$form-success-focus:  #659234;
+$form-group-success:  #fcfefb;
+$form-info:           #37bc9b;
+$form-group-info:     #a7e5d6;
+$form-info-2:         #26816a;
+$form-warning:        #f6bb42;
+$form-warning-focus:  #e19b0b;
+$form-group-addon:    #fcfefe;
+$form-blue:           #168cbe;
+
+// Contacts
+$contact-white:       #fff;
+$contact-blue:        #3bafda;
+$contact-gray:        #ddd;

@@ -1,19 +1,26 @@
 .search_results ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
+
+  // .search_results ul li
+  li {
+    padding: 10px;
+
+    // .search_results ul li h4
+    h4 {
+      font: 400 20px / 24px "Open Sans", Arial, sans-serif;
+    }
+
+    // .search_results ul li + li
+    + li {
+      border: 1px solid $search-gray;
+      padding-bottom: 10;
+    }
+  }
 }
-.search_results ul li {
-  padding: 10px;
-}
-.search_results ul li + li {
-  border: 1px solid #eee;
-  padding-bottom: 10;
-}
-.search_results ul li h4 {
-  font: 400 20px / 24px "Open Sans", Arial, sans-serif;
-}
+
 .search-pagination {
+  border-top: 1px solid $search-gray;
   margin-top: 20px;
-  border-top: 1px solid #eee;
 }
